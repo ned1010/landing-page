@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    margin: auto 24px;
+    height: 64px;
+}
+
+header img {
+    position: absolute;
+    margin-top: 15px;
+}
+
+header h3 {
+    text-transform: uppercase;
+    color: rgba(5, 8, 9, 0.4);
+    display: inline-block;
+    margin-left: 30px;
+}
+header strong {
+    color: black !important;
+}
+nav{
+    float: right;
+}
+
+
+nav .mobile {
+    display: none;
+}
+
+
+nav li {
+    width: fit-content;
+    list-style-type: none;
+    margin: auto 8px;
+    float: left;
+}
+
+nav li a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(5, 8, 9, 0.7)
+}
+nav li a:hover {
+    color: green;
+}
+
+@media screen and (max-width: 767px){
+    header img, 
+    header h3,
+    header nav .desktop li a  {
+        display: none;
+    }
+    header {
+        height: 64px;
+    }
+    
+    header nav {
+        float: none;
+    }
+    header nav .mobile {
+        display: block;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    header nav .mobile li img {
+        display: block;
+        width: 40px;
+        margin: auto;
+        position: relative;
+    }
+
+}
+/*Banner Section */
+
+.banner {
+    background-color: gainsboro;
+    position: relative;
+}
+.banner img {
+    width: 60%;
+    padding: 32px 24px;
+}
+.banner .text-container{
+    font-size: 25px;
+    width: 40%;
+    float: right;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(50%);
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 300px;
+    padding: 8px;
+    color: white;
+    border: 5px;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 767px){
+    .banner img {
+        width: 100%;
+        padding: 0px;
+    }
+    .banner .text-container {
+        width: 100%;
+        font-size: 40px;
+        padding: 32px 16px;
+        position: absolute;
+        top:50%;
+        background-color: gainsboro;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+}
+
+
+/*Infomation Section */
+.information-section {
+    position: relative;
+}
+.information-section .main img {
+    width: 60%;
+    padding: 32px 24px;
+    height: auto;
+}
+.information-section .description {
+    width: 60%;
+    padding: 0px 24px 32px 24px;
+}
+.information-section .info-side {
+    width: 40%;
+    position: absolute;
+    left: 60%;
+    top: 16px;
+}
+.activities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activities img {
+    height: auto;
+    width: 35%;
+    padding: 16px;
+}
+
+.activities .info-description {
+    width: 65%;
+}
+.activities .info-description h3 {
+    margin-bottom: 8px;
+}
+.activities .info-description p {
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 767px) {
+    .information-section {
+        margin-top: 80%;
+        padding: 0px;
+        border-bottom: 1px solid gainsboro;
+    }
+
+    .information-section .main {
+        display: none;
+    }
+
+    .information-section .info-side {
+        width: 100%;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .information-section .info-side .activities {
+        display: block;
+        
+    }
+
+    .information-section .info-side .activities img {
+        width: 100%;
+        height: 500px;
+    }
+    .information-section .info-side .activities .info-description {
+        padding-left: 32px;
+        font-size:20px ;
+        line-height: 35px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    .information-section .info-side .activities .info-description h3 {
+        margin: 0px;
+    }
+
+    .information-section .info-side .activities .info-description p {
+        margin: 0px;
+    }
+    
+}
+/*Course Section */
+.course-section {
+    background-color: gainsboro;
+}
+
+.course-section .mobile {
+    display: none;
+}
+
+.course-section h2 {
+    text-align: center;
+    padding-top: 32px;
+}
+
+.courses {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 56px 32px 56px;
+}
+.course-section .courses .course {
+    background-color: white;
+    width: 300px;
+    height: 350px;
+    margin-bottom: 32px;
+}
+.course-section .courses .course .descrip {
+    padding: 16px;
+}
+.courses .course img {
+    width: 100%;
+}
+
+.course-section .courses .course .descrip .title {
+    padding: 8px auto;
+}
+@media screen and (max-width: 767px) {
+    .course-section {
+        background-color: white;
+    }
+    .course-section .courses {
+        display: none;
+    }
+    .course-section .mobile {
+        background-color: white;
+        display: block;
+        
+    }
+
+    .course-section .mobile li {
+        list-style-type: none;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 16px 24px;
+        margin-top: 8px;
+        background-color: gainsboro;
+        border-radius: 5px;
+    }
+    
+}
+/*Thesis Section */
+.thesis {
+    background: white;
+}
+.thesis h2 {
+    width: fit-content;
+    margin: 32px auto 0px;
+}
+.thesis .container {
+    margin: 32px 0px 0px 24px;
+    display: flex;
+}
+
+.thesis .container .video-container {
+    width: 60%;
+}
+
+.thesis .container .video-container video {
+    padding-right: 24px;
+}
+.thesis .container .video-container .description {
+    margin-right: 24px;
+}
+.thesis .container .video-container .description h3 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+.thesis .container .video-container .description p {
+    margin-bottom: 32px;
+}
+
+.thesis .container .left {
+    width: 40%;
+    display: block;
+}
+
+.thesis .container .left .leftItem {
+    display: flex;
+    align-items: center;
+}
+.thesis .container .left img {
+    width: 35%;
+    height: auto;
+    padding: 16px;
+}
+
+
+.thesis .container .left h3, 
+.thesis .container .left p
+ {
+     margin: 5px;
+}
+
+.thesis .container .left .top {
+    background-color: gainsboro;
+}
+@media screen and (max-width: 767px){
+    .thesis .container .left {
+        display: none;
+    }
+    .thesis .container .video-container {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .thesis .container .video-container .description {
+        display: none;
+    }
+
+}
+/*Footer Section */
+footer .left {
+    margin: 16px auto 32px 24px;
+    display: inline-block;
+}
+
+footer .right{
+    float: right;
+    margin-right: 24px;
+}
+
+footer span {
+    margin: auto 10px;
+}
+
+@media screen and (max-width: 767px) {
+    footer .right {
+        display: none;
+    }
+    footer .left {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+}
